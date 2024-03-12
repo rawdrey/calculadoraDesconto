@@ -11,16 +11,34 @@ namespace calculadora_desconto
         static void Main(string[] args)
         {
             Console.WriteLine("Incira o nome do produto:");
-            string produto = Console.ReadLine();
+            string produto = Console.ReadLine();           
             Console.WriteLine("Incira o preço:");
-            double preco = double.Parse(Console.ReadLine());
+            double preco = double.Parse(                Console.ReadLine()).                ("C2");
             Console.WriteLine("Incira a quantidade");
-            int quantidade = int.Parse
-                (Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
             Console.WriteLine("Confira os ítens solicitados:");
-            Console.WriteLine($"{produto}, {preco} {quantidade}");
-
-
+            Console.WriteLine($"{produto}, {preco} {quantidade} unidades");
+                            double precoFinal = preco * quantidade;
+                if (quantidade <= 10)
+                {
+                Console.WriteLine($"O preço final dos ítens é {precoFinal:C2}");
+            }
+else if( quantidade <= 20)
+            {
+                double desconto1 = precoFinal * 0.9;
+                Console.WriteLine($"O preço final dos ítens, com 10% de desconto é {desconto1:C2}");
+            }
+                else if(quantidade <= 50)
+                        {
+                double desconto2 = precoFinal * 0.8;
+                Console.WriteLine($"O preço final dos ítens, com 20% de desconto é de {desconto2:C2}");
+            }
+                else if(quantidade >= 51)
+            {
+                double desconto3 = precoFinal * 0.75;
+                Console.WriteLine($"O preço final dos ítens é de {desconto3:C2}");
+            }
+                
         }
     }
 }
