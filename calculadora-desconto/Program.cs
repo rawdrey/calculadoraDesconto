@@ -15,7 +15,10 @@ namespace calculadora_desconto
             Console.WriteLine("Incira o preço:");
             double preco = double.Parse(Console.ReadLine());
             Console.WriteLine("Incira a quantidade");
-            int quantidade = Console.ReadLine();
+            int quantidade = int.Parse
+                (Console.ReadLine());
+            Console.WriteLine("Confira os ítens solicitados:");
+            Console.WriteLine($"{produto}, {preco} {quantidade}");
 
 
         }
