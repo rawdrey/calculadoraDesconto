@@ -8,6 +8,33 @@ namespace calculadora_desconto
 {
     class Program
     {
+        public string nome { get; set; }
+        public double preco { get; set; }
+        public produto(string nome, double preco)
+            nome = nome;
+ 
+            preco = preco;
+            }
+    public double precoFinal(int quantidade)
+    {
+        double precoFinal = precoFinal * quantidade;
+        if (quantidade <= 10)
+        {
+            return precoFinal;
+        }
+        else if (quantidade <= 20)
+        {
+            return precoFinal * 0.9;
+            else if (quantidade <= 50)
+            {
+                return precoFinal * 0.8;
+            }
+            else (return quantidade * 0.75;)
+        }
+
+    }
+}       
+
         static void Main(string[] args)
         {
             Console.WriteLine("Incira o nome do produto:");
